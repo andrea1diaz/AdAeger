@@ -1,9 +1,6 @@
 from sqlalchemy import Column, Integer, String, Sequence, DateTime, ForeignKey,\
 event, literal_column, Float
-from sqlalchemy.orm.interfaces import PropComparator
-from sqlalchemy.ext.hybrid import hybrid_property
-from sqlalchemy.ext.declarative import as_declarative, declared_attr
-from sqlalchemy.orm.collections import attribute_mapped_collection
+from sqlalchemy.ext.declarative import declared_attr
 from sqlalchemy.orm import relationship, column_property, backref
 from sqlalchemy.ext.associationproxy import association_proxy
 from werkzeug.security import generate_password_hash, check_password_hash
@@ -13,10 +10,11 @@ from flask_login import UserMixin, LoginManager
 from datetime import datetime
 
 app = Flask(__name__)
-db = connector.Manager()
-engine = db.createEngine()
+# db = connector.Manager()
+# engine = db.createEngine()
 login = LoginManager(app)
 login.login_view = 'login'
+
 
 class User(connector.Manager.Base, UserMixin):
     __tablename__ = 'users'
@@ -50,6 +48,7 @@ class User(connector.Manager.Base, UserMixin):
 
     def check_password(self, password):
         return check_password_hash(self.password, password)
+
 
 class MedicationAssociation(connector.Manager.Base):
     __tablename__ = 'address_association'.lower()
