@@ -1,0 +1,56 @@
+{% extends "base_profile.html" %}
+
+{% block content %}
+<form name="edit_profile" action="edit_profile" method="post" class="text-left">
+  {{ form.hidden_tag() }}
+  <div class="login-form-main-message"></div>
+  <div class="main-login-form">
+    <div class="login-group">
+      <div class="first-info">
+        <p style="font-weight: bold;">Fullname:</p>
+        <div class="form-group" style="margin-bottom: 44px;">
+          {{ form.name.label(class="sr-only") }}
+          {{ form.name(size=32, class="form-control jun", placeholder="name") }}
+          {% for error in form.name.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+         {{ form.lastname.label(class="sr-only") }}
+         {{ form.lastname(size=32, class="form-control jun", placeholder="lastname") }}
+         {% for error in form.lastname.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+       </div>
+      </div>
+      <div class="info">
+        <p style="font-weight: bold;">Date of Birth:</p>
+        <div class="form-group">
+          {{ form.day.label(class="sr-only") }}
+          {{ form.day(size=2, class="form-control fecha_form", placeholder="day") }}
+          {{ form.month.label(class="sr-only") }}
+          {{ form.month(size=10, class="form-control fecha_form", placeholder="month") }}
+          {{ form.year.label(class="sr-only") }}
+          {{ form.year(size=4, class="form-control fecha_form", placeholder="year") }}
+        </div>
+        <div class="form-group" style="margin-top: 42px;">
+          <p style="font-weight: bold;">Blood Type:</p>
+            {{ form.blood_type(size=6, class="form-control", placeholder="blood type") }}
+          <p style="font-weight: bold;">Weight:</p>
+            {{ form.weight.label(class="sr-only ") }}
+            {{ form.weight(size=6, class="form-control", placeholder="weight") }}
+          <p style="font-weight: bold;">Height:</p>
+            {{ form.height.label(class="sr-only") }}
+            {{ form.height(size=6, class="form-control", placeholder="height") }}
+      </div>
+    </div>
+  </div>
+  {% endblock %}
+
+  {% block save_edit %}
+    {{ form.submit(class="edit-btn") }}
+    <a href="/profile">
+      <button class="edit-btn" value="cancel">
+      cancel
+      </button>
+    </a>
+  {% endblock %}
+</form>

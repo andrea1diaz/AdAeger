@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>M E D</title>
+    <link rel="shortcut icon" type="image/png" href="/static/images/logo.png"/>
+    <link rel="stylesheet" href="/static/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata:400,700" type="text/css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:600,500" type="text/css">
+    <script src="/static/js/libs/bootstrap.min.js" ></script>
+  </head>
+  <body style="background-color: #eeedf0;">
+    <div class="text-center" style="padding:15% 0">
+	     <div class="logo">
+         <img class="logo" src="/static/images/logo.png" height= "120px" width= "120px"/>
+       </div>
+     <div class="login-form-1">
+       {% block content %}{% endblock %}
+     </div>
+   </div>
+   </body>

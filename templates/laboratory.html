@@ -1,0 +1,31 @@
+{% extends "home.html" %}
+
+{% block title%} LABORATORY {% endblock%}
+
+{% block style%}
+<link rel="stylesheet" href="/static/css/laboratory.css">
+<script src="/static/js/laboratories.js"></script>
+{% endblock %}
+
+{% block inicio %}
+<div class="content">
+  <div>
+    <p><b>BUSCAR POR:</b></p>
+  </div>
+  <div style="height: 90%";>
+    <table class="table-laboratories">
+      <tr class="titles">
+        <td style="width: 70%;border-right-color: black;border-right-width: 2px;
+        border-right-style: solid;">FECHA</td>
+        <td style="padding-left: 8px;">PEDIDO POR</td>
+      </tr>
+    </table>
+    <table id="labs" class="table-laboratories" >
+    </table>
+  </div>
+  <a href="#ex2"  rel="modal:open" class="edit-btn">add</a>
+</div>
+<div id="ex2" class="modal" style="height: 500px !important;">
+  <iframe src="/hemograma" class="add-something"></iframe>
+</div>
+{% endblock %}

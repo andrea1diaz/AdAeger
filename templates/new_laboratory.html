@@ -1,0 +1,43 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/static/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/css/home.css">
+    <link rel="stylesheet" href="/static/css/laboratory.css">
+    <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css?family=Inconsolata:400,700" type="text/css">
+    <link rel="stylesheet"
+    href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css?family=Poppins:600,500" type="text/css">
+    <link rel="stylesheet"
+    href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.0/animate.min.css">
+    <script src="/static/js/libs/bootstrap.min.js" ></script>
+    <script src="/static/js/libs/jquery-3.3.1.js"></script>
+  </head>
+  <body>
+    <h1 class="title" style="font-size: 13px; margin-bottom: 12px;">NEW LABORATORY</h1>
+    <div class="login-form-1">
+      <form name="add_new_med" action="/add_new_med" method="post" class="text-left">
+        <div class="login-form-main-message"></div>
+        <div class="main-login-form">
+          <div class="login-group">
+             <select>
+               <option>
+                 <a href="#ex3"  rel="modal:open">hemograma completo</a>
+               </option>
+               <option>
+                 nada
+               </option>
+             </select>
+          </div>
+        </div>
+      </form>
+    </div>
+  </body>
+  <div id="ex3" class="modal" style="height: 500px !important;">
+    <iframe src="/hemograma" class="add-something"></iframe>
+  </div>
+</html>

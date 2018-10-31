@@ -1,0 +1,56 @@
+{% extends "home.html" %}
+
+{% block title%} HOME {% endblock%}
+
+{% block style%}
+<script src="/static/js/medicines.js"></script>
+{% endblock %}
+
+{% block inicio %}
+<div class="boxes box1">
+  <div class="title_box title">
+    <h1 style="font-size: 15px;">MEDICATION</h1>
+  </div>
+  <div style="padding: 20px;">
+    <table id="medications_container" style="width: 100%">
+    </table>
+  </div>
+</div>
+<div class="boxes">
+  <div class="title_box title">
+    <h1 style="font-size: 15px;">LAST SYMPTOMS</h1>
+  </div>
+  <div>
+    {% block symptons%} {% endblock %}
+  </div>
+</div>
+<div class="boxes box1">
+  <div class="title_box title">
+    <h1 style="font-size: 15px;">APPOIMENTS</h1>
+  </div>
+  <div>
+    {% block appoiments%} {% endblock %}
+  </div>
+</div>
+<div class="boxes">
+  <div class="title_box title">
+    <h1 style="font-size: 15px;">REMAINDERS</h1>
+  </div>
+  <div>
+    {% block remainders%}{% endblock %}
+  </div>
+</div>
+<!-- The Modal -->
+<div id="add_medication_window" class="medication_window">
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h1 class="title" style="font-size: 13px; margin-bottom: 12px;">NEW MEDICATION</h1>
+    <div class="login-form-1">
+      {% block content %}{% endblock %}
+    </div>
+  </div>
+
+</div>
+
+{% endblock %}

@@ -1,0 +1,113 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/static/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/css/home.css">
+    <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css?family=Inconsolata:400,700" type="text/css">
+    <link rel="stylesheet"
+    href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css?family=Poppins:600,500" type="text/css">
+    <link rel="stylesheet"
+    href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.0/animate.min.css">
+    <script src="/static/js/libs/bootstrap.min.js" ></script>
+    <script src="/static/js/libs/jquery-3.3.1.js"></script>
+  </head>
+  <body>
+    <h1 class="title" style="font-size: 13px; margin-bottom: 12px;">HEMOGRAMA</h1>
+    <div class="login-form-1">
+      <form name="hemograma" class="text-left" action="/add_hemograma"  method="post">
+        {{ form.hidden_tag() }}
+        <div class="main-login-form">
+          <div class="login-group" style="margin-bottom: 12px;border-bottom-style: solid;
+          border-bottom-width: 2px;">
+            <div class="form-group">
+              {{ form.day(size=2, class="form-control fecha_form", placeholder="day") }}
+              {{ form.month(size=10, class="form-control fecha_form", placeholder="month") }}
+              {{ form.year(size=4, class="form-control fecha_form", placeholder="year") }}
+            </div>
+            <div class="form-group">
+              {{ form.doctor(size=32, class="form-control", placeholder="doctor") }}
+            </div>
+          </div>
+        </div>
+        <div class="login-form-main-message"></div>
+        <div class="main-login-form">
+          <div class="login-group">
+             <div class="form-group">
+               {{ form.rcto_hematies(size=32, class="form-control", placeholder="rcto. hematies") }}
+             </div>
+            <div class="form-group">
+              {{ form.rcto_leucocitos(size=32, class="form-control", placeholder="rcto. leucocitos") }}
+            </div>
+            <div class="form-group">
+              {{ form.eosinofilos(size=32, class="form-control", placeholder="eosinofilos") }}
+            </div>
+            <div class="form-group">
+              {{ form.basofilos(size=32, class="form-control", placeholder="basofilos") }}
+            </div>
+             <div class="form-group">
+               {{ form.abastonados(size=32, class="form-control", placeholder="abastonados") }}
+            </div>
+             <div class="form-group">
+               {{ form.segmentados(size=32, class="form-control", placeholder="segmentados") }}
+             </div>
+             <div class="form-group">
+               {{ form.linfocitos(size=32, class="form-control", placeholder="linfocitos") }}
+             </div>
+             <div class="form-group">
+               {{ form.monocitos(size=32, class="form-control", placeholder="monocitos") }}
+             </div>
+             <div class="form-group">
+               {{ form.diferencial_total(size=32, class="form-control", placeholder="diferencial total") }}
+             </div>
+             <div class="form-group">
+               {{ form.hemoglobina_hb(size=32, class="form-control", placeholder="hemoglobina hb") }}
+             </div>
+             <div class="form-group">
+               {{ form.hematocrito_hto(size=32, class="form-control", placeholder="hematocrito hto") }}
+             </div>
+             <div class="form-group">
+               {{ form.volumen_corpuscular_media(size=32, class="form-control", placeholder="volumen corpuscular media") }}
+             </div>
+             <div class="form-group">
+               {{ form.hemoglobina_corpuscular_media(size=32, class="form-control", placeholder="hemoglobina corpuscular media") }}
+             </div>
+             <div class="form-group">
+               {{ form.conc_hb_corpuscular_media(size=32, class="form-control", placeholder="conc hb corpuscular media") }}
+             </div>
+             <div class="form-group">
+               {{ form.eosinofilos_abs(size=32, class="form-control", placeholder="eosinofilos abs") }}
+             </div>
+             <div class="form-group">
+               {{ form.basofilos_abs(size=32, class="form-control", placeholder="basofilos abs") }}
+             </div>
+             <div class="form-group">
+               {{ form.abastonados_abs(size=32, class="form-control", placeholder="abastonados abs") }}
+             </div>
+             <div class="form-group">
+               {{ form.segmentados_abs(size=32, class="form-control", placeholder="segmentados abs") }}
+             </div>
+             <div class="form-group">
+               {{ form.linfocitos_abs(size=32, class="form-control", placeholder="linfocitos abs") }}
+             </div>
+             <div class="form-group">
+               {{ form.monocitos_abs(size=32, class="form-control", placeholder="monocitos abs") }}
+             </div>
+             <div class="form-group">
+               {{ form.rcto_plaquetas(size=32, class="form-control", placeholder="rcto. plaquetas") }}
+             </div>
+          </div>
+          <div>
+            {{ form.submit(class="edit-btn") }}
+          </div>
+           </button>
+        </div>
+      </form>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,19 @@
+{% extends "home.html" %}
+
+{% block title%} PROFILE {% endblock%}
+
+{% block inicio %}
+<div class="avatar">
+</div>
+<div class="info-profile">
+  <div class="info-profile-inside">
+    <div class="info-profile-content">
+      {% block content %} {% endblock %}
+    </div>
+    <div>
+      {% block save_edit %} {% endblock %}
+    </div>
+  </div>
+</div>
+
+{% endblock %}

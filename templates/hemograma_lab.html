@@ -1,0 +1,126 @@
+{% extends "laboratory.html" %}
+
+{% block inicio %}
+<div class="content">
+  <div  style="height: 95%; overflow: scroll;" >
+    <table id="hemograma" class="table-laboratories">
+      <tr class="titles">
+        <td class="border-lab">EXAMEN</td>
+        <td class="border-lab">RESULTADO</td>
+        <td class="border-lab" style="border-right-style: none;">
+          REFERENCIA</td>
+      </tr>
+      <tr>
+        <td>rcto. de hematies</td>
+        <td>{{ data[0]['rcto_hematies'] }}</td>
+        <td>( 4100000 - 5100000 )</td>
+      </tr>
+      <tr>
+        <td>rcto. de leucocitos</td>
+        <td>{{ data[0]['rcto_leucocitos'] }}</td>
+        <td>( 4500 - 11500 )</td>
+      </tr>
+      <tr>
+        <td>eosinofilos</td>
+        <td>{{ data[0]['eosinofilos'] }}</td>
+        <td>( 0 - 5 )</td>
+      </tr>
+      <tr>
+        <td>basofilos</td>
+        <td>{{ data[0]['basofilos'] }}</td>
+        <td>( 0 - 1 )</td>
+      </tr>
+      <tr>
+        <td>abastonados</td>
+        <td>{{ data[0]['abastonados'] }}</td>
+        <td>( 0 - 500 )</td>
+      </tr>
+      <tr>
+        <td>segmentados</td>
+        <td>{{ data[0]['segmentados'] }}</td>
+        <td>( 50 - 70 )</td>
+      </tr>
+      <tr>
+        <td>linfocitos</td>
+        <td>{{ data[0]['linfocitos'] }}</td>
+        <td>( 25 - 40 )</td>
+      </tr>
+      <tr>
+        <td>monocitos</td>
+        <td>{{ data[0]['monocitos'] }}</td>
+        <td>( 2 - 8 )</td>
+      </tr>
+      <tr>
+        <td>diferencial total</td>
+        <td>{{ data[0]['diferencial_total'] }}</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>hemoglobina - hb -</td>
+        <td>{{ data[0]['hemoglobina_hb'] }}</td>
+        <td>( 12.3 - 15.3 )</td>
+      </tr>
+      <tr>
+        <td>hematocrito - hto -</td>
+        <td>{{ data[0]['hematocrito_hto'] }}</td>
+        <td>( 35.0 - 47.0 )</td>
+      </tr>
+      <tr>
+        <td>volumen corpuscular medio</td>
+        <td>{{ data[0]['volumen_corpuscular_media'] }}</td>
+        <td>( 80.0 - 96.0 )</td>
+      </tr>
+      <tr>
+        <td>hemoglobina corpuscular media</td>
+        <td>{{ data[0]['hemoglobina_corpuscular_media'] }}</td>
+        <td>( 28.0 - 33.0 )</td>
+      </tr>
+      <tr>
+        <td>conc. hb corpuscular media</td>
+        <td>{{ data[0]['conc_hb_corpuscular_media'] }}</td>
+        <td>( 33.0 - 36.0 )</td>
+      </tr>
+      <tr>
+        <td>eosinofilos abs.</td>
+        <td>{{ data[0]['eosinofilos_abs'] }}</td>
+        <td>( 0 - 500 )</td>
+      </tr>
+      <tr>
+        <td>basofilos abs.</td>
+        <td>{{ data[0]['basofilos_abs'] }}</td>
+        <td>( 0 - 100 )</td>
+      </tr>
+      <tr>
+        <td>abastonados abs.</td>
+        <td>{{ data[0]['abastonados_abs'] }}</td>
+        <td>( 0 - 500 )</td>
+      </tr>
+      <tr>
+        <td>segmentados abs.</td>
+        <td>{{ data[0]['segmentados_abs'] }}</td>
+        <td>( 2500 - 8000 )</td>
+      </tr>
+      <tr>
+        <td>linfocitos abs.</td>
+        <td>{{ data[0]['linfocitos_abs'] }}</td>
+        <td>( 1000 - 4000 )</td>
+      </tr>
+      <tr>
+        <td>monocitos abs.</td>
+        <td>{{ data[0]['monocitos_abs'] }}</td>
+        <td>( 100 - 700 )</td>
+      </tr>
+      <tr>
+        <td>rcto. de plaquetas</td>
+        <td>{{ data[0]['rcto_plaquetas'] }}</td>
+        <td>( 154000 - 386000 )</td>
+      </tr>
+    </table>
+  </div>
+  <div>
+    <a href="/laboratories">
+      <button class="edit-btn">back</button>
+    </a>
+  </div>
+</div>
+{% endblock %}
