@@ -1,0 +1,23 @@
+# Uncomment the next line to define a global platform for your project
+platform :ios, '12.0'
+source 'https://github.com/CocoaPods/Specs.git'
+
+target 'Ad Aeger' do
+  # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for Ad Aeger
+pod 'Alamofire', '~> 4.7'
+pod 'AlamofireObjectMapper', '~> 5.2'
+
+  target 'Ad AegerTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+  target 'Ad AegerUITests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+end
+
