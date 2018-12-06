@@ -50,7 +50,7 @@ class APIClient {
     static func signup(withUsername username: String, password: String) {
         print("Sending request")
         let parameters: Parameters = ["username": username, "password": password]
-        Alamofire.request("https://4d8dfd82.ngrok.io/app_signup", method: .post, parameters: parameters).responseJSON { response in
+        Alamofire.request("https://67178a13.ngrok.io/app_signup", method: .post, parameters: parameters).responseJSON { response in
             if let json = response.result.value {
                 print("JSON: \(json)")
             }
@@ -60,7 +60,7 @@ class APIClient {
     static func login(withUsername username: String, password: String, completion: @escaping () -> Void) {
         print("Sending request login")
         let parameters: Parameters = ["username": username, "password": password]
-        Alamofire.request("https://fb798ce2.ngrok.io/app_login", method: .post, parameters: parameters, encoding: JSONEncoding.default).responseJSON {
+        Alamofire.request("https://67178a13.ngrok.io/app_login", method: .post, parameters: parameters, encoding: JSONEncoding.default).responseJSON {
             response in
             if let json = response.result.value as? [String: AnyObject] {
                 print("JSON: \(json)")
@@ -75,7 +75,7 @@ class APIClient {
     
     static func medicationsFetch() {
         print("fetching medications")
-        Alamofire.request("http://192.168.1.16:8800/medications", method: .get).responseArray{(response: DataResponse<[Medications]>) in
+        Alamofire.request("http://10.100.240.164:8800/medications", method: .get).responseArray{(response: DataResponse<[Medications]>) in
             let meds = response.result.value
             
             if let meds = meds {
